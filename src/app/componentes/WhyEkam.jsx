@@ -128,7 +128,7 @@ const WhyEkam = () => {
 
   return (
     <section className="py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -155,7 +155,7 @@ const WhyEkam = () => {
           </motion.div>
 
           {/* Navigation Arrows */}
-          <motion.button
+          {/* <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
@@ -163,9 +163,9 @@ const WhyEkam = () => {
             className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 group-hover:opacity-100"
           >
             <BsChevronLeft className="w-6 h-6 text-gray-800" />
-          </motion.button>
+          </motion.button> */}
           
-          <motion.button
+          {/* <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
@@ -173,7 +173,7 @@ const WhyEkam = () => {
             className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 group-hover:opacity-100"
           >
             <BsChevronRight className="w-6 h-6 text-gray-800" />
-          </motion.button>
+          </motion.button> */}
 
           <div className="relative h-[500px] overflow-hidden rounded-3xl">
             <AnimatePresence initial={false} custom={direction}>
@@ -196,7 +196,7 @@ const WhyEkam = () => {
                   
                   return (
                     <div key={index} className="h-full w-full px-6">
-                      <div className={`h-full w-full rounded-3xl bg-gradient-to-br ${feature.bgGradient} p-12 flex flex-col items-center justify-center space-y-8`}>
+                      <div className={`h-full w-full rounded-3xl bg-gradient-to-br ${feature.bgGradient} p-6 flex flex-col items-center justify-center space-y-8`}>
                         <motion.div 
                           initial={{ x: -50, opacity: 0 }}
                           animate={{ x: 0, opacity: 1 }}

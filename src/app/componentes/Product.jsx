@@ -1,5 +1,8 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
+import ModalDrawer from './ModalDrawer'
 
 const products = [
     {
@@ -111,6 +114,15 @@ const products = [
 ]
 
 const Product = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedProduct, setSelectedProduct] = useState(null);
+
+    const handleProductClick = (e, product) => {
+        e.preventDefault(); // Prevent the default link behavior
+        setSelectedProduct(product);
+        setIsModalOpen(true);
+    };
+
     return (
         <section className="py-20 px-4 bg-gray-50">
             <div className="max-w-7xl mx-auto">
@@ -129,6 +141,7 @@ const Product = () => {
                         <Link 
                             href={product.link} 
                             key={product.id}
+                            onClick={(e) => handleProductClick(e, product)}
                             className="group relative bg-white rounded-3xl border border-pink-300 overflow-hidden shadow-[0_0_15px_rgba(236,72,153,0.3)] hover:shadow-[0_0_20px_rgba(236,72,153,0.5)] transition-all duration-300 transform hover:-translate-y-1"
                         >
                             <div className="aspect-[3/3] relative overflow-hidden">
@@ -183,6 +196,13 @@ const Product = () => {
                     </Link>
                 </div> */}
             </div>
+
+            {/* Modal */}
+            <ModalDrawer 
+                isOpen={isModalOpen} 
+                onClose={() => setIsModalOpen(false)}
+                selectedProduct={selectedProduct}
+            />
         </section>
     )
 }

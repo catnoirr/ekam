@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const testimonials = [
@@ -64,7 +64,29 @@ const testimonials = [
 
 const Testimonials = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  const testimonialsPerPage = 4;
+  const [testimonialsPerPage, setTestimonialsPerPage] = useState(1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setTestimonialsPerPage(4);
+      } else if (window.innerWidth >= 640) {
+        setTestimonialsPerPage(2);
+      } else {
+        setTestimonialsPerPage(1);
+      }
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const totalPages = Math.ceil(testimonials.length / testimonialsPerPage);
 
   const nextPage = () => {
@@ -83,20 +105,20 @@ const Testimonials = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-2">Testimonials</h2>
-          <h1 className="text-4xl font-bold mb-4">What Our Clients Say !</h1>
-          <div className="text-2xl font-semibold text-[#00D1C1]">Let's Check</div>
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2">Testimonials</h2>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">What Our Clients Say !</h1>
+          <div className="text-xl sm:text-2xl font-semibold text-[#00D1C1]">Let's Check</div>
         </div>
 
-        <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="relative px-4 sm:px-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {currentTestimonials.map((testimonial) => (
               <div 
                 key={testimonial.id}
-                className="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 mx-auto w-full max-w-sm"
               >
-                <div className="aspect-w-16 aspect-h-9 mb-4">
+                <div className="aspect-w-16 aspect-h-9 mb-3 sm:mb-4">
                   <Image
                     src={testimonial.image}
                     alt={`${testimonial.name}'s testimonial`}
@@ -105,12 +127,12 @@ const Testimonials = () => {
                     className="rounded-lg object-cover w-full h-full"
                   />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{testimonial.name}</h3>
-                <div className="flex mb-3">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">{testimonial.name}</h3>
+                <div className="flex mb-2 sm:mb-3">
                   {[...Array(testimonial.rating)].map((_, index) => (
                     <svg
                       key={index}
-                      className="w-5 h-5 text-yellow-400"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -118,7 +140,7 @@ const Testimonials = () => {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-600 text-sm line-clamp-4">{testimonial.text}</p>
+                <p className="text-gray-600 text-xs sm:text-sm line-clamp-4">{testimonial.text}</p>
               </div>
             ))}
           </div>
@@ -126,19 +148,19 @@ const Testimonials = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevPage}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none z-10 transition-all duration-300 hover:scale-110"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-12 bg-white p-2 sm:p-3 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none z-10 transition-all duration-300 hover:scale-110"
             aria-label="Previous testimonials"
           >
-            <svg className="w-6 h-6 text-[#00D1C1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-[#00D1C1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           <button
             onClick={nextPage}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none z-10 transition-all duration-300 hover:scale-110"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-12 bg-white p-2 sm:p-3 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none z-10 transition-all duration-300 hover:scale-110"
             aria-label="Next testimonials"
           >
-            <svg className="w-6 h-6 text-[#00D1C1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-[#00D1C1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
