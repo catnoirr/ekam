@@ -22,3 +22,19 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 2rem)); /* Adjust for the gap between items */
+  }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+  width: fit-content;
+  display: flex;
+  gap: 2rem;
+}
