@@ -136,7 +136,7 @@ const Product = () => {
                     <div className="w-24 h-1.5 bg-gradient-to-r from-cyan-500 to-yellow-500 mx-auto mt-6 rounded-full"></div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {products.map((product) => (
                         <Link 
                             href={product.link} 

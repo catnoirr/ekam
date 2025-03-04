@@ -108,7 +108,7 @@ const Testimonials = () => {
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold mb-2">Testimonials</h2>
           <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">What Our Clients Say !</h1>
-          <div className="text-xl sm:text-2xl font-semibold text-[#00D1C1]">Let's Check</div>
+          <div className="text-xl sm:text-2xl font-semibold text-[#11b1e2]">Let's Check</div>
         </div>
 
         <div className="relative px-4 sm:px-0">
