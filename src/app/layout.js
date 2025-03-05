@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "WeMee - Print Your Story",
-  description: "Customize and print your story with WeMee",
+  title: "Ekam - Print Your Story",
+  description: "Customize and print your story with Ekam",
 };
 
 export default function RootLayout({ children }) {
