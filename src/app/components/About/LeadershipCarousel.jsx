@@ -47,7 +47,7 @@ const LeadershipCarousel = () => {
 
   return (
     <div className="mx-auto px-4 text-center">
-      <div className="bg-[#fafeff] py-5">
+      <div className=" py-8">
       <h2 className="text-3xl font-bold text-blue-900 mb-4">Why Ekam</h2>
       <p className="text-lg font-regular text-gray-700 mb-4 max-w-xs mx-auto">We provide printing services that will suit your specific needs.</p>
       </div>
@@ -56,7 +56,7 @@ const LeadershipCarousel = () => {
           {leaders.map((leader, index) => (
             <div key={index} className="px-2">
               <div className="relative w-48 h-60 mx-auto overflow-hidden">
-                <Image src={leader.image} alt={leader.name} fill className="object-cover" />
+                <Image src={leader.image} alt="images" fill className="object-cover" />
               </div>
             </div>
           ))}

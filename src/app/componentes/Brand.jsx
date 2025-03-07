@@ -8,27 +8,27 @@ const brands = [
   {
     id: 1,
     name: 'Oracle',
-    image: '/brands/oracle.png'
+    image: 'https://logos-world.net/wp-content/uploads/2020/09/Oracle-Logo.png'
   },
   {
     id: 2,
     name: 'Tata Power',
-    image: '/brands/tata-power.png'
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png'
   },
   {
     id: 3,
     name: 'TCS',
-    image: '/brands/tcs.png'
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/2560px-Tata_Consultancy_Services_Logo.svg.png'
   },
   {
     id: 4,
     name: 'TEDx',
-    image: '/brands/tedx.png'
+    image: 'https://logos-world.net/wp-content/uploads/2020/09/Oracle-Logo.png'
   },
   {
     id: 5,
-    name: 'Vadilal',
-    image: '/brands/vadilal.png'
+    name: 'Microsoft',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png'
   }
 ];
 
@@ -67,8 +67,8 @@ const Brand = () => {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-black">
-            Trusted By Countless <span className="text-cyan-500">Brands</span>
+          <h2 className="text-3xl font-bold mb-4 text-black">
+            Trusted By Countless <span className="text-red-500">Brands</span>
           </h2>
           <p className="text-gray-600 text-lg">
             500 Clients | 1000+ Happy Customer

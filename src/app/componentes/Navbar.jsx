@@ -3,9 +3,14 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FiSearch, FiUser, FiShoppingCart } from 'react-icons/fi'
+import { useRouter, usePathname } from 'next/navigation'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [isCategoryOpen, setIsCategoryOpen] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
 
   const categories = [
     'Corporate Gifts Set',
@@ -19,8 +24,67 @@ const Navbar = () => {
     'Cap'
   ]
 
+  const handleMobileMenuClick = () => {
+    setIsOpen(!isOpen);
+    // Close categories when closing the menu
+    if (!isOpen) {
+      setIsCategoryOpen(false);
+    }
+  };
+
+  const handleMobileCategoryClick = (e) => {
+    e.preventDefault();
+    setIsCategoryOpen(!isCategoryOpen);
+  };
+
+  const handleCategoryClick = (e, category) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    // If not on home page, first navigate to home page
+    if (pathname !== '/') {
+      router.push('/');
+      // Wait for navigation to complete
+      setTimeout(() => {
+        const productsSection = document.querySelector('#products');
+        if (productsSection) {
+          const navbarHeight = 64;
+          const targetPosition = productsSection.offsetTop - navbarHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+        setIsLoading(false);
+      }, 500); // Wait for 500ms for navigation
+    } else {
+      // If already on home page, just scroll
+      const productsSection = document.querySelector('#products');
+      if (productsSection) {
+        const navbarHeight = 64;
+        const targetPosition = productsSection.offsetTop - navbarHeight;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 800);
+    }
+  };
+
   return (
     <nav className="fixed w-full bg-white shadow-sm z-50">
+      {/* Loading bar - visible when isLoading is true */}
+      <div 
+        className={`h-0.5 bg-blue-500 transition-transform duration-300 ease-in-out ${
+          isLoading ? 'w-full' : 'w-0'
+        }`} 
+      />
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -36,8 +100,8 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/customization" className="text-gray-700 hover:text-blue-500">
-              CUSTOMIZATION
+            <Link href="/" className="text-gray-700 hover:text-blue-500">
+             Home
             </Link>
             <div className="relative group">
               <button
@@ -64,6 +128,7 @@ const Navbar = () => {
                     <Link
                       key={index}
                       href={`/category/${category.toLowerCase().replace(/\s+/g, '-')}`}
+                      onClick={(e) => handleCategoryClick(e, category)}
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-500"
                     >
                       {category}
@@ -98,7 +163,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={handleMobileMenuClick}
               className="text-gray-700 hover:text-blue-500"
             >
               <svg
@@ -132,19 +197,23 @@ const Navbar = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link
-                href="/customization"
+                href="/"
+                onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 text-gray-700 hover:text-blue-500"
               >
-                CUSTOMIZATION
+                HOME
               </Link>
               {/* Mobile Categories */}
               <div className="space-y-1">
                 <button
+                  onClick={handleMobileCategoryClick}
                   className="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-500"
                 >
                   EXPLORE CATEGORIES
                   <svg
-                    className="w-4 h-4 transition-transform"
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      isCategoryOpen ? 'rotate-180' : ''
+                    }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -157,26 +226,35 @@ const Navbar = () => {
                     />
                   </svg>
                 </button>
+                {isCategoryOpen && (
                   <div className="pl-6 space-y-1">
                     {categories.map((category, index) => (
                       <Link
                         key={index}
                         href={`/category/${category.toLowerCase().replace(/\s+/g, '-')}`}
+                        onClick={(e) => {
+                          handleCategoryClick(e, category);
+                          setIsOpen(false); // Close mobile menu after selection
+                          setIsCategoryOpen(false); // Close category dropdown
+                        }}
                         className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-500"
                       >
                         {category}
                       </Link>
                     ))}
                   </div>
+                )}
               </div>
               <Link
                 href="/testimonials"
+                onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 text-gray-700 hover:text-blue-500"
               >
                 TESTIMONIALS
               </Link>
               <Link
                 href="/about"
+                onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 text-gray-700 hover:text-blue-500"
               >
                 ABOUT US

@@ -66,7 +66,7 @@ const Services = () => {
   };
 
   return (
-    <section className="py-10 bg-blue-50">
+    <section className="py-10  bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <span className="text-red-500 font-semibold text-xl mb-1 block">

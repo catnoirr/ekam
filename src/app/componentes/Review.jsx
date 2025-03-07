@@ -75,7 +75,7 @@ const Review = () => {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-                className="bg-[#00BFA6] text-white px-5 py-2 rounded-lg text-sm font-medium whitespace-nowrap"
+                className="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-medium whitespace-nowrap"
           >
             Write a Review
           </motion.button>
