@@ -19,7 +19,7 @@ const Brands = () => {
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">
+          <h2 className="text-4xl font-bold mb-4 text-black">
             Brands Who Have <span className="text-pink-600">Trusted Us</span>
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-cyan-500 to-yellow-500 mx-auto rounded-full"></div>
