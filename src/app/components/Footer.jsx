@@ -1,23 +1,26 @@
 import Image from "next/image";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
+import FloatingWhatsApp from "./FloatingWhatsApp";
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-8 border-t border-gray-200">
-      <div className="container mx-auto px-6 lg:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
-            <h2 className="text-2xl font-bold text-black">
-              <span className="text-[#0099cc]">We</span><span className="text-red-600">Mee</span>
-            </h2>
-            <p className="text-gray-600 text-sm mt-2">
-              At WeMee, we create impactful corporate gifting solutions that enhance brand identity,
-              foster employee engagement, and build lasting relationships.
+    <footer className="bg-[#fafeff] py-10 mt-10">
+      <div className="mx-auto px-6 lg:px-20">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="col-span-2">
+          <Image src="/logo.jpg" alt="Paytm" width={100} height={20} />
+            
+            <p className="text-gray-600 text-sm mt-2 c">
+              At Ekam, we create impactful corporate gifting solutions that enhance brand identity, foster employee engagement, and build lasting relationships. With innovative and trend-driven ideas, we offer scalable, customizable, and globally accessible gifts designed to make a memorable impression.
             </p>
-            <a href="#" className="text-red-500 font-semibold mt-2 inline-block">SHOW ON MAP</a>
+            <a href="#" className="text-red-500 mt-4 inline-block underline">SHOW ON MAP</a>
           </div>
 
-          {/* Company Links */}
           <div>
             <h3 className="text-lg font-semibold text-gray-900 border-b-2 border-teal-400 w-max pb-1">COMPANY</h3>
             <ul className="mt-3 space-y-2 text-sm text-gray-600">
@@ -27,7 +30,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold text-gray-900 border-b-2 border-teal-400 w-max pb-1">QUICK LINKS</h3>
             <ul className="mt-3 space-y-2 text-sm text-gray-600">
@@ -36,7 +38,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Policies */}
           <div>
             <h3 className="text-lg font-semibold text-gray-900 border-b-2 border-teal-400 w-max pb-1">OUR POLICIES</h3>
             <ul className="mt-3 space-y-2 text-sm text-gray-600">
@@ -47,49 +48,54 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social Media */}
-        <div className="flex items-center space-x-4 mt-8">
-          <a href="#" className="text-pink-500"><i className="fab fa-instagram text-2xl"></i></a>
-          <a href="#" className="text-blue-600"><i className="fab fa-facebook text-2xl"></i></a>
-          <a href="#" className="text-blue-500"><i className="fab fa-linkedin text-2xl"></i></a>
-          <a href="#" className="text-red-500"><i className="fab fa-youtube text-2xl"></i></a>
-        </div>
-
-        {/* Payment and Courier Partners */}
-        <div className="mt-8">
-          <h4 className="text-center text-sm font-semibold">100% SECURE PAYMENT</h4>
-          <div className="flex justify-center space-x-4 mt-3">
-            <Image src="/paytm.png" alt="Paytm" width={50} height={20} />
-            <Image src="/phonepe.png" alt="PhonePe" width={50} height={20} />
-            <Image src="/razorpay.png" alt="Razorpay" width={50} height={20} />
-            <Image src="/mastercard.png" alt="Mastercard" width={50} height={20} />
+        <div className="flex justify-between">
+          <div className="flex justify-center items-end gap-2 mb-4">
+            {[
+              {
+                Icon: FaInstagram,
+                color:
+                  "from-[#feda75] via-[#d62976] to-[#962fbf] bg-gradient-to-br ",
+                link: "https://instagram.com",
+              },
+              {
+                Icon: FaFacebookF,
+                color: "from-blue-500 to-blue-700 bg-gradient-to-r",
+                link: "https://facebook.com",
+              },
+              {
+                Icon: FaLinkedinIn,
+                color: "from-blue-700 to-blue-900 bg-gradient-to-r",
+                link: "https://linkedin.com",
+              },
+              {
+                Icon: FaYoutube,
+                color: "from-red-500 to-red-700 bg-gradient-to-r",
+                link: "https://youtube.com",
+              },
+            ].map(({ Icon, color, link }, index) => (
+              <a
+                key={index}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-white p-2 rounded-xl ${color} hover:scale-110 transition`}
+              >
+                <Icon size={20} />
+              </a>
+            ))}
           </div>
-          <h4 className="text-center text-sm font-semibold mt-6">OUR TRUSTED COURIER PARTNERS</h4>
-          <div className="flex justify-center space-x-4 mt-3">
-            <Image src="/bluedart.png" alt="Blue Dart" width={50} height={20} />
-            <Image src="/xpressbees.png" alt="XpressBees" width={50} height={20} />
-            <Image src="/dtdc.png" alt="DTDC" width={50} height={20} />
-            <Image src="/fedex.png" alt="FedEx" width={50} height={20} />
+
+          <div className="mt-8 flex sm:flex-row flex-col items-end sm:gap-10">
+            <div className="flex justify-center space-x-4 mt-3">
+              <Image src="https://wemeestore.com/wp-content/uploads/2022/03/1-scaled.webp" alt="Paytm" width={350} height={20} />
+            </div>
+            <div className="flex justify-center space-x-4 mt-3">
+            <Image src="https://wemeestore.com/wp-content/uploads/2022/03/2-scaled.webp" alt="Paytm" width={350} height={20} />
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Floating WhatsApp Button */}
-      <a
-        href="https://wa.me/yourphonenumber"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-5 left-5 flex items-center bg-white px-3 py-2 rounded-full shadow-lg hover:shadow-xl transition-all"
-      >
-        <Image
-          src="/whatsapp-icon.png"
-          alt="WhatsApp"
-          width={40}
-          height={40}
-          className="rounded-full"
-        />
-        <span className="ml-2 text-sm font-semibold text-gray-800">Need A Help?</span>
-      </a>
+      <FloatingWhatsApp/>
     </footer>
   );
 };

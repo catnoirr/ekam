@@ -6,16 +6,16 @@ const FloatingWhatsApp = () => {
       href="https://wa.me/yourphonenumber"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-5 left-5 flex items-center bg-white px-3 py-2 rounded-full shadow-lg hover:shadow-xl transition-all"
+      className="fixed bottom-5 right-32 flex items-center transition-all"
     >
       <Image
-        src="/whatsapp-icon.png" // Replace with your WhatsApp logo path
+        src="/about/whatsapp.png"
         alt="WhatsApp"
-        width={40}
-        height={40}
+        width={50}
+        height={50}
         className="rounded-full"
       />
-      <span className="ml-2 text-sm font-semibold text-gray-800">Need A Help?</span>
+      <p className="ml-2 text-xs font-semibold text-gray-800 bg-white px-3 text-center py-1 -ms-20 rounded-full absolute w-28 -right-[100px]">Need A Help?</p>
     </a>
   );
 };

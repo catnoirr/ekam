@@ -9,6 +9,7 @@ import Testimonials from './componentes/Testimonials'
 import Services from './componentes/Services'
 import CustomizedProduct from './componentes/CustomizedProduct'
 import LeadershipCarousel from './components/About/LeadershipCarousel'
+import StatsSection from './components/About/StatsSection'
 export default function page() {
   return (
     <div>
@@ -21,7 +22,8 @@ export default function page() {
       <LeadershipCarousel/>
       <Testimonials />
       <Services />
-      <CustomizedProduct />
+      <StatsSection/>
+      {/* <CustomizedProduct /> */}
     </div>
   )
 }
