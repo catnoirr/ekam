@@ -8,6 +8,8 @@ import WhyEkam from './componentes/WhyEkam'
 import Testimonials from './componentes/Testimonials'
 import Services from './componentes/Services'
 import CustomizedProduct from './componentes/CustomizedProduct'
+import Review from './componentes/Review'
+import Brand from './componentes/Brand'
 export default function page() {
   return (
     <div>
@@ -20,6 +22,9 @@ export default function page() {
       <Testimonials />
       <Services />
       <CustomizedProduct />
+      <Review />
+      <Brand />
+
     </div>
   )
 }
