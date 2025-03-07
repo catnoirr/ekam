@@ -8,6 +8,7 @@ import WhyEkam from './componentes/WhyEkam'
 import Testimonials from './componentes/Testimonials'
 import Services from './componentes/Services'
 import CustomizedProduct from './componentes/CustomizedProduct'
+import LeadershipCarousel from './components/About/LeadershipCarousel'
 export default function page() {
   return (
     <div>
@@ -16,7 +17,8 @@ export default function page() {
       <CTA />
       <Quote />
       <Brands />
-      <WhyEkam />
+      {/* <WhyEkam /> */}
+      <LeadershipCarousel/>
       <Testimonials />
       <Services />
       <CustomizedProduct />
