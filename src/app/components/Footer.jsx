@@ -9,7 +9,7 @@ import FloatingWhatsApp from "./FloatingWhatsApp";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#fafeff] py-10 mt-10">
+    <footer className="bg-[#fafeff] py-10">
       <div className="mx-auto px-6 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="col-span-2">
