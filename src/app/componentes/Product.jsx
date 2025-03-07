@@ -9,70 +9,70 @@ const products = [
         id: 1,
         title: "ROUNDNECK T-SHIRTS",
         description: "Classic comfort meets style",
-        image: "/products/roundedneck.png",
+        image: "https://img.freepik.com/free-photo/simple-black-t-shirt-worn-by-man_53876-102772.jpg?uid=R154017377&ga=GA1.1.1669204415.1735993747&semt=ais_hybrid",
         link: "/products/roundneck"
     },
     {
         id: 2,
         title: "COLLAR T-SHIRTS",
         description: "Professional polo collection",
-        image: "/products/collar.png",
+        image: "https://img.freepik.com/premium-photo/polo-shirt-design-young-man-black-polo-shirt-isolated_324842-59.jpg?uid=R154017377&ga=GA1.1.1669204415.1735993747&semt=ais_hybrid",
         link: "/products/collar"
     },
     {
         id: 3,
         title: "HOODIES / JACKETS",
         description: "Stay warm in style",
-        image: "/products/hoodie.png",
+        image: "https://img.freepik.com/free-photo/young-person-wearing-hoodie-mockup_23-2149246216.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
         link: "/products/hoodies"
     },
     {
         id: 4,
         title: "CORPORATE SHIRTS",
         description: "Business ready apparel",
-        image: "/products/corporate.png",
+        image: "https://img.freepik.com/premium-photo/handsome-businessman_53419-3419.jpg?uid=R154017377&ga=GA1.1.1669204415.1735993747&semt=ais_hybrid",
         link: "/products/corporate"
     },
     {
         id: 5,
         title: "SPORTS JERSEY",
         description: "Performance sportswear",
-        image: "/products/sports.png",
+        image: "https://img.freepik.com/free-photo/3-color-tshirt-template-design_1409-4398.jpg?uid=R154017377&ga=GA1.1.1669204415.1735993747&semt=ais_hybrid",
         link: "/products/sports"
     },
     {
         id: 6,
         title: "CAPS",
         description: "Stylish headwear collection",
-        image: "/products/caps.png",
+        image: "https://img.freepik.com/premium-photo/stack-assorted-baseball-caps-white-background_93675-163140.jpg?uid=R154017377&ga=GA1.1.1669204415.1735993747&semt=ais_hybrid",
         link: "/products/caps"
     },
     {
         id: 7,
         title: "BRANDED APPARELS",
         description: "Custom branded clothing",
-        image: "/products/branded.png",
+        image: "https://img.freepik.com/premium-photo/young-handsome-man-black-hoodie-zipper-posing-plain-wall_262099-162.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
         link: "/products/branded"
     },
     {
         id: 8,
         title: "DRINKWARE",
         description: "Premium drink accessories",
-        image: "/products/drinkware.png",
+        image: "https://img.freepik.com/premium-psd/hand-hold-bottle-water-mockup_206643-32.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
         link: "/products/drinkware"
     },
     {
         id: 9,
         title: "CORPORATE GIFT SET",
         description: "Premium drink accessories",
-        image: "/products/coporate-gift-set.png",
+        image: "https://img.freepik.com/premium-photo/gifts-black-golden-decorations-white-background-christmas-winter-new-year-concept_241749-183.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
         link: "/products/giftset"
     },
     {
         id: 10,
         title: "DIARIES & PENS",
         description: "Premium drink accessories",
-        image: "/products/pens.png",
+        image: "https://img.freepik.com/free-photo/top-view-red-notebook-with-white-background_23-2148236793.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
         link: "/products/diaries"
     },
    
@@ -80,35 +80,35 @@ const products = [
         id: 11,
         title: "DESK ORGANIZERS",
         description: "Premium drink accessories",
-        image: "/products/desk.png",
+        image: "https://img.freepik.com/free-photo/books-vase-vintage-camera-eyeglasses-pencil-holders-white-blank-paper-wooden-backdrop_23-2147979111.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
         link: "/products/desk-accessories"
     },
     {
         id: 12,
         title: "SMART GADGETS",
         description: "Premium drink accessories",
-        image: "/products/smart-gadget.png",
+        image: "https://img.freepik.com/free-photo/modern-stationary-collection-arrangement_23-2149309628.jpg?t=st=1741369628~exp=1741373228~hmac=dec178682216c4d479b63afe89a5b32a2d146ade2ad7dcb78806fcc78a713255&w=740",
         link: "/products/smart-gadgets"
     },
     {
         id: 13,
         title: "TECH GADGETS",
         description: "Premium drink accessories",
-        image: "/products/gadgets.png",
+        image: "https://img.freepik.com/premium-photo/high-angle-view-digital-camera-table_1048944-23315823.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
         link: "/products/tech-gadgets"
     },
     {
         id: 14,
         title: "BAGS & LUGGAGE",
         description: "Premium drink accessories",
-        image: "/products/bags.png",
+        image: "https://img.freepik.com/free-photo/travel-bags-ready-trip_23-2148232365.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
         link: "/products/bags"
     },
     {
         id: 15,
         title: "PERSONALIZED PRODUCTS",
         description: "Premium drink accessories",
-        image: "/products/products.png",
+        image: "https://img.freepik.com/free-photo/elevated-view-camera-lens-spiral-notebook-cellphone-personal-accessories-background_23-2147856120.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
         link: "/products/products"
     },
 ]
@@ -133,7 +133,6 @@ const Product = () => {
                     <p className="text-gray-600 text-lg max-w-2xl mx-auto">
                         Discover our premium collection of customizable products for your brand
                     </p>
-                    <div className="w-24 h-1.5 bg-gradient-to-r from-cyan-500 to-yellow-500 mx-auto mt-6 rounded-full"></div>
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -151,7 +150,6 @@ const Product = () => {
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 
                                 {/* Hover Overlay Content */}
                                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">

@@ -8,35 +8,35 @@ const CustomizedProduct = () => {
   const products = [
     {
       id: 1,
-      image: '/shop-4.webp',
+      image: 'https://img.freepik.com/premium-photo/man-is-painting-lion-shirt-that-says-tiger_981168-13942.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid',
       title: 'Custom Apparel',
       description: 'Express yourself with personalized clothing',
       category: 'Fashion'
     },
     {
       id: 2,
-      image: '/shop-5.webp',
+      image: 'https://img.freepik.com/free-photo/close-up-hand-painting-with-sponge_23-2148754065.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid',
       title: 'Accessories',
       description: 'Add your personal touch to everyday items',
       category: 'Lifestyle'
     },
     {
       id: 3,
-      image: '/shop-8.webp',
+      image: 'https://img.freepik.com/premium-photo/embroidered-sport-cap-embroidery-machine-close-up-picture_58717-256.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid',
       title: 'Home Decor',
       description: 'Make your space uniquely yours',
       category: 'Home'
     },
     {
       id: 4,
-      image: '/shop-6.webp',
+      image: 'https://img.freepik.com/premium-psd/plastic-bottle-mock-up_106544-107.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid ',
       title: 'Home Decor',
       description: 'Make your space uniquely yours',
       category: 'Home'
     },
     {
       id: 5,
-      image: '/shop-9.webp',
+      image: 'https://img.freepik.com/free-photo/medium-shot-woman-repairing-fashion-goods_23-2150628002.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid',
       title: 'Home Decor',
       description: 'Make your space uniquely yours',
       category: 'Home'
