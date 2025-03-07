@@ -20,7 +20,7 @@ const Brands = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4 text-black">
-            Brands Who Have <span className="text-pink-600">Trusted Us</span>
+            Brands Who Have <span className="text-red-600">Trusted Us</span>
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-cyan-500 to-yellow-500 mx-auto rounded-full"></div>
         </div>

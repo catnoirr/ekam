@@ -14,7 +14,7 @@ export default function Hero() {
           priority="true"
         />
       </div>
-      <div className='text-white text-base sm:text-lg md:text-xl font-semibold px-6 sm:px-8 md:px-10 py-2 sm:py-3 my-3 sm:my-4 md:my-5 bg-blue-500 rounded-full hover:bg-blue-600 hover:scale-105 transition-all duration-300 cursor-pointer'>
+      <div className='text-white text-base sm:text-lg md:text-xl font-semibold px-6 sm:px-8 md:px-10 py-2 sm:py-3 my-3 sm:my-4 md:my-5 bg-teal-600 rounded-md hover:bg-teal-700 hover:scale-105 transition-all duration-300 cursor-pointer'>
         Get Best Price
       </div>
     </section>

@@ -66,19 +66,19 @@ const Services = () => {
   };
 
   return (
-    <section className="py-24 bg-blue-50">
+    <section className="py-10 bg-blue-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <span className="text-pink-500 font-semibold text-lg mb-4 block">
+        <div className="text-center mb-10">
+          <span className="text-red-500 font-semibold text-xl mb-1 block">
             Discover Our Services
           </span>
-          <h2 className="text-5xl font-bold mb-6 text-black">
+          <h2 className="text-3xl font-bold mb-1 text-black">
             Premium{' '}
             <span className="text-blue-600">
               Printing Solutions
             </span>
           </h2>
-          <div className="w-32 h-2 mx-auto mb-6 bg-yellow-400 rounded-full"></div>
+          <div className="w-1/4 h-1 mx-auto mb-6 bg-yellow-400 rounded-full"></div>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Discover our comprehensive range of high-quality printing solutions tailored to bring your vision to life.
           </p>
@@ -86,8 +86,8 @@ const Services = () => {
 
         <Slider {...settings} className="services-slider">
           {services.map((service, index) => (
-            <div key={index} className="px-4 py-2">
-              <div className="bg-white rounded-3xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-[500px] group">
+            <div key={index} className="px-4 py-6">
+              <div className="bg-white rounded-3xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 h-[500px] group">
                 <div className="relative h-72">
                   <Image
                     src={service.image}
