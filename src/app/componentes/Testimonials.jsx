@@ -106,8 +106,8 @@ const Testimonials = () => {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-2">Testimonials</h2>
-          <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">What Our Clients Say !</h1>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-black">Testimonials</h2>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 text-black">What Our Clients Say !</h1>
           <div className="text-xl sm:text-2xl font-semibold text-[#11b1e2]">Let's Check</div>
         </div>
 
@@ -127,7 +127,7 @@ const Testimonials = () => {
                     className="rounded-lg object-cover w-full h-full"
                   />
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold mb-2">{testimonial.name}</h3>
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 text-black">{testimonial.name}</h3>
                 <div className="flex mb-2 sm:mb-3">
                   {[...Array(testimonial.rating)].map((_, index) => (
                     <svg

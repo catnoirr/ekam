@@ -18,7 +18,7 @@ export default function Home() {
         <div className="max-w-6xl w-full px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-4 text-center">
-              <h2 className="text-2xl font-semibold">Photos</h2>
+              <h2 className="text-2xl font-semibold text-black">Photos</h2>
               <div className="w-32 border-b-2 border-teal-500 mx-auto mt-1 mb-4"></div>
               <div className="relative w-full h-[30rem]">
                 <Image
@@ -37,7 +37,7 @@ export default function Home() {
             </div>
 
             <div className="bg-white p-4 text-center">
-              <h2 className="text-2xl font-semibold">Videos</h2>
+              <h2 className="text-2xl font-semibold text-black">Videos</h2>
               <div className="w-32 border-b-2 border-teal-500 mx-auto mt-1 mb-4"></div>
               <div className="relative w-full h-[30rem]">
                 <Image
@@ -59,7 +59,7 @@ export default function Home() {
       </div>
 
       <div className="bg-gray-100 py-6 text-center">
-        <h2 className="text-3xl font-semibold mb-4">LET&apos;S BE FRIENDS!</h2>
+        <h2 className="text-3xl font-semibold mb-4 text-black">LET&apos;S BE FRIENDS!</h2>
         <div className="flex justify-center gap-7 mb-4">
           {[
             {
@@ -116,7 +116,7 @@ export default function Home() {
             className="bg-white max-w-3xl w-full p-6 shadow-lg relative"
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
           >
-            <h2 className="text-4xl font-semibold mb-4 text-center">Photos</h2>
+            <h2 className="text-4xl font-semibold mb-4 text-center text-black">Photos</h2>
             <div className="max-h-[65vh] overflow-y-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-2 scrollbar-[3px] scrollbar-thumb-gray-400 scrollbar-track-gray-100">
               {[
                 "https://wemeestore.com/wp-content/uploads/2024/07/1-3-1024x1024.webp",
@@ -166,7 +166,7 @@ export default function Home() {
             className="bg-white max-w-3xl w-full p-6 shadow-lg relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-4xl font-semibold mb-4 text-center">Video</h2>
+            <h2 className="text-4xl font-semibold mb-4 text-center text-black">Video</h2>
 
             <div className="relative w-full h-64 sm:h-80 md:h-96">
               <iframe

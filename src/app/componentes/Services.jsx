@@ -72,7 +72,7 @@ const Services = () => {
           <span className="text-pink-500 font-semibold text-lg mb-4 block">
             Discover Our Services
           </span>
-          <h2 className="text-5xl font-bold mb-6">
+          <h2 className="text-5xl font-bold mb-6 text-black">
             Premium{' '}
             <span className="text-blue-600">
               Printing Solutions
