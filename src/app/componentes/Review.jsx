@@ -47,7 +47,7 @@ const Review = () => {
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <div className="flex items-center gap-4">
               <div className=" h-16  overflow-hidden">
-            <img src="/logo.jpg" alt="WeMee Logo" className="w-full h-full object-cover" />
+            <img src="/newlogo.png" alt="WeMee Logo" className="w-full h-full object-cover" />
           </div>
           <div>
                 <div className="flex items-center gap-2">
@@ -75,7 +75,8 @@ const Review = () => {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-                className="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-medium whitespace-nowrap"
+            onClick={() => window.open('https://g.page/r/CfWj7DtvVBF9EAE/review', '_blank')}
+            className="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-medium whitespace-nowrap"
           >
             Write a Review
           </motion.button>

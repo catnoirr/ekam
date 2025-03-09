@@ -11,7 +11,7 @@ const CTA = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "1234567890";
+    const phoneNumber = "+919773347222";
     window.open(`https://wa.me/${phoneNumber}`, "_blank");
   };
 

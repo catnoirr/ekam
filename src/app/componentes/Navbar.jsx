@@ -150,7 +150,7 @@ const Navbar = () => {
           {/* Right Icons */}
           <div className="flex items-center space-x-4">
             <a 
-              href="https://wa.me/919876543210" 
+              href="https://wa.me/+919773347222" 
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex items-center space-x-2 text-gray-700 hover:text-green-500"
@@ -246,11 +246,11 @@ const Navbar = () => {
                 )}
               </div>
               <Link
-                href="/testimonials"
+                href="/customize"
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 text-gray-700 hover:text-blue-500"
               >
-                TESTIMONIALS
+                CUSTOMIZE PRODUCT
               </Link>
               <Link
                 href="/about"

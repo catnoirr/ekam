@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="mx-auto px-6 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="col-span-2">
-          <Image src="/logo.jpg" alt="Paytm" width={100} height={20} />
+          <Image src="/newlogo.png" alt="Paytm" width={100} height={20} />
             
             <p className="text-gray-600 text-sm mt-2 c">
               At Ekam, we create impactful corporate gifting solutions that enhance brand identity, foster employee engagement, and build lasting relationships. With innovative and trend-driven ideas, we offer scalable, customizable, and globally accessible gifts designed to make a memorable impression.
