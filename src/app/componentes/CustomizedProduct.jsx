@@ -145,7 +145,7 @@ const CustomizedProduct = () => {
         </motion.div>
 
         {/* Call to Action */}
-        <div className="mt-20 text-center">
+        <div className=" text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

@@ -131,7 +131,7 @@ const Product = () => {
     return (
         <>
             <div className="text-center mt-10" id="products">
-                    <h2 className="text-3xl font-bold mb-4">
+                    <h2 className="text-3xl text-black font-bold mb-4">
                         Explore Our <span className="text-red-600">Categories</span>
                     </h2>
                     <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -176,7 +176,7 @@ const Product = () => {
                             {/* Card Title */}
                             <div className="p-5">
                                 <h3 className="font-semibold text-base text-gray-800 group-hover:text-cyan-600 transition-colors duration-300">
-                                    {product.title}
+                                    {product.title} PRINT
                                 </h3>
                             </div>
 

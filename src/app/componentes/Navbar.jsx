@@ -194,71 +194,83 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link
-                href="/"
-                onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-gray-700 hover:text-blue-500"
-              >
-                HOME
-              </Link>
-              {/* Mobile Categories */}
-              <div className="space-y-1">
-                <button
-                  onClick={handleMobileCategoryClick}
-                  className="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-500"
+          <div className="md:hidden absolute top-20 left-0 right-0 bg-white border-b border-gray-200 rounded-b-2xl shadow-lg overflow-hidden">
+            <div className="max-h-[80vh] overflow-y-auto">
+              <div className="px-4 py-3 space-y-2">
+                <Link
+                  href="/"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-3 py-2.5 text-gray-700 hover:text-blue-500 rounded-lg hover:bg-gray-50"
                 >
-                  EXPLORE CATEGORIES
-                  <svg
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      isCategoryOpen ? 'rotate-180' : ''
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                  HOME
+                </Link>
+                {/* Mobile Categories */}
+                <div className="space-y-1">
+                  <button
+                    onClick={handleMobileCategoryClick}
+                    className="flex items-center justify-between w-full px-3 py-2.5 text-gray-700 hover:text-blue-500 rounded-lg hover:bg-gray-50"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-                {isCategoryOpen && (
-                  <div className="pl-6 space-y-1">
-                    {categories.map((category, index) => (
-                      <Link
-                        key={index}
-                        href={`/category/${category.toLowerCase().replace(/\s+/g, '-')}`}
-                        onClick={(e) => {
-                          handleCategoryClick(e, category);
-                          setIsOpen(false); // Close mobile menu after selection
-                          setIsCategoryOpen(false); // Close category dropdown
-                        }}
-                        className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-500"
-                      >
-                        {category}
-                      </Link>
-                    ))}
-                  </div>
-                )}
+                    <span>EXPLORE CATEGORIES</span>
+                    <svg
+                      className={`w-4 h-4 transition-transform duration-200 ${
+                        isCategoryOpen ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {isCategoryOpen && (
+                    <div className="pl-4 space-y-1 bg-gray-50 rounded-lg py-2 mx-2">
+                      {categories.map((category, index) => (
+                        <Link
+                          key={index}
+                          href={`/category/${category.toLowerCase().replace(/\s+/g, '-')}`}
+                          onClick={(e) => {
+                            handleCategoryClick(e, category);
+                            setIsOpen(false);
+                            setIsCategoryOpen(false);
+                          }}
+                          className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-500 rounded-lg hover:bg-gray-100"
+                        >
+                          {category}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <Link
+                  href="/customize"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-3 py-2.5 text-gray-700 hover:text-blue-500 rounded-lg hover:bg-gray-50"
+                >
+                  CUSTOMIZE PRODUCT
+                </Link>
+                <Link
+                  href="/about"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-3 py-2.5 text-gray-700 hover:text-blue-500 rounded-lg hover:bg-gray-50"
+                >
+                  ABOUT US
+                </Link>
+                {/* Mobile WhatsApp Link */}
+                <a 
+                  href="https://wa.me/+919773347222" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 px-3 py-2.5 text-gray-700 hover:text-green-500 rounded-lg hover:bg-gray-50"
+                >
+                  <BsWhatsapp className="h-5 w-5" />
+                  <span className="font-medium">Chat with us</span>
+                </a>
               </div>
-              <Link
-                href="/customize"
-                onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-gray-700 hover:text-blue-500"
-              >
-                CUSTOMIZE PRODUCT
-              </Link>
-              <Link
-                href="/about"
-                onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-gray-700 hover:text-blue-500"
-              >
-                ABOUT US
-              </Link>
             </div>
           </div>
         )}

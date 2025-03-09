@@ -23,7 +23,7 @@ const products = [
     { id: 15, title: "PERSONALIZED PRODUCTS" },
 ];
 
-const inputStyles = "w-full border border-gray-300 rounded-3xl px-4 py-2.5 outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all";
+const inputStyles = "w-full border border-gray-300 rounded-3xl px-4 py-2.5 outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all text-black";
 const radioStyles = "peer sr-only";
 const radioLabelStyles = "w-full text-center px-3 py-2 text-sm border border-gray-300 rounded-3xl cursor-pointer peer-checked:bg-pink-500 peer-checked:text-white peer-checked:border-transparent hover:bg-gray-50 transition-all";
 const submitButtonStyles = "w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-3xl font-medium hover:from-blue-600 hover:to-blue-700 focus:ring-4 focus:ring-blue-500/20 transition-all duration-300";
@@ -246,7 +246,7 @@ const ModalDrawer = ({ isOpen, onClose, selectedProduct }) => {
 
                   <div>
                     <label className="block text-gray-700 text-sm font-medium mb-3">Quantity Required *</label>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+                    <div className="grid text-black grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
                       {['25-50', '50-100', '100-200', '200-500', 'Above 500'].map((quantity) => (
                         <label key={quantity} className="relative">
                           <input

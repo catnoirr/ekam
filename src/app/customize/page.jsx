@@ -93,6 +93,7 @@ export default function Home() {
         designIncluded: !!designFile,
         timestamp: serverTimestamp(),
         submittedAt: new Date().toISOString(),
+        approved: false,
         status: "pending",
       });
 

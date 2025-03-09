@@ -22,7 +22,7 @@ export default function Hero() {
       <div 
         onClick={() => setIsModalOpen(true)}
         className='text-white text-base sm:text-lg md:text-xl font-semibold px-6 sm:px-8 md:px-10 py-2 sm:py-3 my-3 sm:my-4 md:my-5 bg-blue-400 rounded-4xl hover:bg-blue-700 hover:scale-105 transition-all duration-300 cursor-pointer'>
-        Get Best Price
+        Enquiry Now
       </div>
 
       <ModalDrawer 
