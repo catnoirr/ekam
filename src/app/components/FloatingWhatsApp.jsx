@@ -3,7 +3,7 @@ import Image from "next/image";
 const FloatingWhatsApp = () => {
   return (
     <a
-      href="https://wa.me/yourphonenumber"
+      href="https://wa.me/+919773347222"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-5 right-32 flex items-center transition-all"
