@@ -80,7 +80,7 @@ const Services = () => {
           </h2>
           <div className="w-1/4 h-1 mx-auto mb-6 bg-yellow-400 rounded-full"></div>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Discover our comprehensive range of high-quality printing solutions tailored to bring your vision to life.
+           Design to reality - Get a high quality printing solutions experience crafted just for you.
           </p>
         </div>
 

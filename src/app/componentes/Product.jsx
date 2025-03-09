@@ -132,10 +132,10 @@ const Product = () => {
         <>
             <div className="text-center mt-10" id="products">
                     <h2 className="text-3xl font-bold mb-4">
-                        Top Selling <span className="text-red-600">Products</span>
+                        Explore Our <span className="text-red-600">Categories</span>
                     </h2>
                     <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                        Discover our premium collection of customizable products for your brand
+                        Your one-stop solution for all Printing needs.
                     </p>
                     <div className="w-24 h-1.5 bg-gradient-to-r from-cyan-500 to-yellow-500 mx-auto mt-6 rounded-full"></div>
                 </div>

@@ -31,10 +31,10 @@ const CTA = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Ready to Get Started?
+            Ready to Print Your Design?
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose your preferred way to connect with us. We're here to help you succeed.
+            Connect with Ekam Graphics in your preferred way -  we are here to bring your ideas to life.
           </p>
         </div>
 

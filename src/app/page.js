@@ -16,7 +16,7 @@ import Brand from './componentes/Brand'
 
 export default function page() {
   return (
-    <div>
+    <div className='bg-white overflow-hidden'>
       <Hero />
       <Product />
       <CTA />

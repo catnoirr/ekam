@@ -153,14 +153,14 @@ const ModalDrawer = ({ isOpen, onClose, selectedProduct }) => {
             }}
             className={`fixed ${
               isMobile 
-                ? 'bottom-0 left-0 right-0 max-h-[85vh]' 
-                : 'top-[400px] left-1/2 -translate-x-1/2 -translate-y-1/2 max-h-[85vh] w-full max-w-2xl'
-            } bg-white rounded-t-[20px] md:rounded-[20px] z-50 shadow-2xl flex flex-col`}
+                ? 'bottom-0 left-0 right-0 max-h-[90vh]' 
+                : 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-h-[90vh] w-full max-w-2xl'
+            } bg-white rounded-t-[20px] md:rounded-[20px] z-50 shadow-2xl flex flex-col overflow-hidden`}
           >
             {/* Fixed Header */}
             <div className="flex-shrink-0 bg-white px-6 py-4 border-b border-gray-100 flex justify-between items-center rounded-t-[20px]">
               <div>
-                <h2 className="text-2xl font-bold text-gray-800">Print Your Story!</h2>
+                <h2 className="text-2xl font-bold text-gray-800">Printing Beyond Limits</h2>
                 {selectedProduct && (
                   <p className="text-sm text-gray-500 mt-1">Selected: {selectedProduct.title}</p>
                 )}

@@ -2,7 +2,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FiSearch, FiUser, FiShoppingCart } from 'react-icons/fi'
+import { FiPhone } from 'react-icons/fi'
+import { BsWhatsapp } from 'react-icons/bs'
 import { useRouter, usePathname } from 'next/navigation'
 
 const Navbar = () => {
@@ -77,7 +78,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full bg-white shadow-sm z-50">
+    <div className="bg-white">
+    <nav className="fixed left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl border border-gray-200 bg-white shadow-md z-50 rounded-full mt-2">
       {/* Loading bar - visible when isLoading is true */}
       <div 
         className={`h-0.5 bg-blue-500 transition-transform duration-300 ease-in-out ${
@@ -92,8 +94,8 @@ const Navbar = () => {
             <Image
               src="/newlogo.png"
               alt="ekam Logo"
-              width={80}
-              height={35}
+              width={60}
+              height={25}
               className="object-contain"
             />
           </Link>
@@ -101,7 +103,8 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/" className="text-gray-700 hover:text-blue-500">
-             Home
+             HOME
+
             </Link>
             <div className="relative group">
               <button
@@ -136,8 +139,8 @@ const Navbar = () => {
                   ))}
                 </div>
             </div>
-            <Link href="/testimonials" className="text-gray-700 hover:text-blue-500">
-              TESTIMONIALS
+            <Link href="/customize" className="text-gray-700 hover:text-blue-500">
+              CUSTOME PRODUCT
             </Link>
             <Link href="/about" className="text-gray-700 hover:text-blue-500">
               ABOUT US
@@ -146,18 +149,15 @@ const Navbar = () => {
 
           {/* Right Icons */}
           <div className="flex items-center space-x-4">
-            <button className="text-gray-700 hover:text-blue-500">
-              <FiSearch className="h-5 w-5" />
-            </button>
-            <Link href="/account" className="text-gray-700 hover:text-blue-500">
-              <FiUser className="h-5 w-5" />
-            </Link>
-            <Link href="/cart" className="text-gray-700 hover:text-blue-500 relative">
-              <FiShoppingCart className="h-5 w-5" />
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-                0
-              </span>
-            </Link>
+            <a 
+              href="https://wa.me/919876543210" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:flex items-center space-x-2 text-gray-700 hover:text-green-500"
+            >
+              <BsWhatsapp className="h-5 w-5" />
+              <span className="font-medium">Chat with us</span>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -264,6 +264,7 @@ const Navbar = () => {
         )}
       </div>
     </nav>
+    </div>
   )
 }
 
