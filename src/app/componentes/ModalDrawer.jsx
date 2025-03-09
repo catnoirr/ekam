@@ -1,6 +1,9 @@
 'use client'
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { db } from '../../firebase';
+import { collection, setDoc, doc, serverTimestamp } from 'firebase/firestore';
+import { useRouter } from 'next/navigation';
 
 const products = [
     { id: 1, title: "ROUNDNECK T-SHIRTS" },
@@ -26,8 +29,10 @@ const radioLabelStyles = "w-full text-center px-3 py-2 text-sm border border-gra
 const submitButtonStyles = "w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-3xl font-medium hover:from-blue-600 hover:to-blue-700 focus:ring-4 focus:ring-blue-500/20 transition-all duration-300";
 
 const ModalDrawer = ({ isOpen, onClose, selectedProduct }) => {
+  const router = useRouter();
   const [isMobile, setIsMobile] = useState(false);
-  const [formData, setFormData] = useState({
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const initialFormState = {
     fullName: '',
     mobileNumber: '',
     location: '',
@@ -36,7 +41,8 @@ const ModalDrawer = ({ isOpen, onClose, selectedProduct }) => {
     quantity: '',
     productRequirement: '',
     note: ''
-  });
+  };
+  const [formData, setFormData] = useState(initialFormState);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -69,10 +75,37 @@ const ModalDrawer = ({ isOpen, onClose, selectedProduct }) => {
     };
   }, [isOpen]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    onClose();
+    setIsSubmitting(true);
+    try {
+      // Create custom document ID with current timestamp
+      const timestamp = Date.now();
+      const customDocId = `enquiry${timestamp}`;
+      
+      // Create a new document with custom ID in the Enquiry collection
+      const docRef = doc(db, 'Enquiry', customDocId);
+      await setDoc(docRef, {
+        ...formData,
+        timestamp: serverTimestamp(),
+        submittedAt: new Date().toISOString(),
+        approved: false,
+        status: 'pending'
+      });
+      
+      console.log('Form submitted with ID:', customDocId);
+      // Clear form fields
+      setFormData(initialFormState);
+      // Close modal
+      onClose();
+      // Redirect to thank you page
+      router.push('/thankyou');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your form. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e) => {
@@ -264,9 +297,20 @@ const ModalDrawer = ({ isOpen, onClose, selectedProduct }) => {
 
                   <button
                     type="submit"
-                    className={submitButtonStyles}
+                    disabled={isSubmitting}
+                    className={`${submitButtonStyles} ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''} relative`}
                   >
-                    SUBMIT
+                    {isSubmitting ? (
+                      <div className="flex items-center justify-center">
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Submitting...
+                      </div>
+                    ) : (
+                      'SUBMIT'
+                    )}
                   </button>
                 </form>
 
