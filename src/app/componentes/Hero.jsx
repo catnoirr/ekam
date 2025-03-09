@@ -6,14 +6,14 @@ export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className='flex justify-center items-center w-full flex-col px-4 sm:px-6 md:px-8'>
+    <section className='flex justify-center items-center w-full flex-col px-4 sm:px-6 md:px-8 py-4'>
       <div className='relative w-full md:w-[90%] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] hover:shadow-xl transition-shadow duration-300 overflow-hidden rounded-lg'>
         <img 
           src="/products/hero.png" 
           alt="Hero banner" 
           width={1920}
           height={1080}
-          className='absolute inset-0 w-full h-full object-contain md:object-cover object-center transform hover:scale-105 transition-transform duration-500'
+          className='absolute inset-0 w-full h-full object-contain  object-center '
           loading="eager"
           priority="true"
         />
