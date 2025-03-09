@@ -90,10 +90,10 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo.jpg"
-              alt="WeMee Logo"
-              width={120}
-              height={40}
+              src="/newlogo.png"
+              alt="ekam Logo"
+              width={80}
+              height={35}
               className="object-contain"
             />
           </Link>

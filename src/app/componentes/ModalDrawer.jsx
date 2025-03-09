@@ -40,7 +40,8 @@ const ModalDrawer = ({ isOpen, onClose, selectedProduct }) => {
     jobTitle: '',
     quantity: '',
     productRequirement: '',
-    note: ''
+    note: '',
+    isNew: true
   };
   const [formData, setFormData] = useState(initialFormState);
 
