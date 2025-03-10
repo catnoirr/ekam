@@ -2,8 +2,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { db } from "../../firebase";
+import { db, storage } from "../../firebase";
 import { collection, setDoc, doc, serverTimestamp } from "firebase/firestore";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import {
   FaInstagram,
   FaFacebookF,
@@ -30,10 +31,10 @@ const products = [
 ];
 
 const inputStyles =
-  "w-full border border-gray-300 rounded-3xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 bg-white/50 backdrop-blur-sm hover:border-blue-300";
+  "w-full border border-gray-300 rounded-3xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 bg-white/50 backdrop-blur-sm hover:border-blue-300 text-black";
 const radioStyles = "peer sr-only";
 const radioLabelStyles =
-  "w-full text-center px-3 py-2.5 text-sm font-medium border border-gray-300 rounded-3xl cursor-pointer peer-checked:bg-gradient-to-r peer-checked:from-blue-500 peer-checked:to-blue-600 peer-checked:text-white peer-checked:border-transparent hover:bg-gray-50 hover:border-blue-300 transition-all duration-300";
+  "w-full text-center px-3 py-2.5 text-sm font-medium border border-gray-300 rounded-3xl cursor-pointer peer-checked:bg-gradient-to-r peer-checked:from-blue-500 peer-checked:to-blue-600 peer-checked:text-white peer-checked:border-transparent hover:bg-gray-50 hover:border-blue-300 transition-all duration-300 text-black";
 const submitButtonStyles =
   "w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3.5 rounded-3xl font-medium hover:from-blue-600 hover:to-blue-700 focus:ring-4 focus:ring-blue-500/20 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-blue-500/25";
 
@@ -86,11 +87,20 @@ export default function Home() {
     try {
       const timestamp = Date.now();
       const customDocId = `customization${timestamp}`;
+      let designFileUrl = null;
+
+      // Upload design file if it exists
+      if (designFile) {
+        const storageRef = ref(storage, `designs/${customDocId}/${designFile.name}`);
+        await uploadBytes(storageRef, designFile);
+        designFileUrl = await getDownloadURL(storageRef);
+      }
 
       const docRef = doc(db, "Customizations", customDocId);
       await setDoc(docRef, {
         ...formData,
         designIncluded: !!designFile,
+        designFileUrl,
         timestamp: serverTimestamp(),
         submittedAt: new Date().toISOString(),
         approved: false,

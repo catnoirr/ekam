@@ -5,13 +5,12 @@ import { getMessaging, isSupported } from "firebase/messaging";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA5I6haYUO0h_qD9TsYuXKex2LnaxjP5wg",
-  authDomain: "ekam-dd039.firebaseapp.com",
-  projectId: "ekam-dd039",
-  storageBucket: "ekam-dd039.firebasestorage.app",
-  messagingSenderId: "929989595",
-  appId: "1:929989595:web:a29ef83237f67dab031dfe",
-  measurementId: "G-ZFG38B1KR0"
+  apiKey: "AIzaSyA6hPiCznDoKTgZQ-mI8jTUDI8tgNZrrx0",
+  authDomain: "vahan-suraksha-d2181.firebaseapp.com",
+  projectId: "vahan-suraksha-d2181",
+  storageBucket: "vahan-suraksha-d2181.firebasestorage.app",
+  messagingSenderId: "1056503336845",
+  appId: "1:1056503336845:web:9f2f96bb4e0e0e761e77c4"
 };
 
 const app = initializeApp(firebaseConfig);

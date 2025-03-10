@@ -65,3 +65,14 @@ body {
 .animation-delay-4000 {
   animation-delay: 4s;
 }
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
