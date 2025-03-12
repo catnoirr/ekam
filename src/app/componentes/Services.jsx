@@ -99,7 +99,7 @@ const Services = () => {
                 </div>
                 <div className="p-8 relative">
                   <div className="absolute top-0 left-0 w-full h-16"></div>
-                  <h3 className="text-xl font-bold mb-2 border-2 border-gray-400 p-2 px-4 rounded-full  text-center">{service.name}</h3>
+                  <h3 className="text-xl font-bold mb-2 border-2 border-gray-400 p-2 px-4 rounded-full  text-center text-black">{service.name}</h3>
                   <p className="text-black leading-relaxed text-lg">
                     {service.description}
                   </p>
