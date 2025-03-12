@@ -28,7 +28,7 @@ export default function page() {
       <Services />
       <CustomizedProduct />
       <Review />
-      <Brand />
+      {/* <Brand /> */}
       <StatsSection/>
 
     </div>
