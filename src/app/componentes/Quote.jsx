@@ -272,7 +272,7 @@ const Quote = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium py-3.5 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg ${
+                  className={`w-full bg-black text-white font-medium py-3.5 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg ${
                     isSubmitting ? 'opacity-75 cursor-not-allowed' : 'hover:from-cyan-600 hover:to-blue-600 transform hover:scale-[1.02]'
                   }`}
                 >
