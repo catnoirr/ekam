@@ -49,29 +49,24 @@ const PurposeAndLeadership = () => {
       </div>
 
       <h2 className="text-4xl font-bold text-blue-600">Leadership Spotlight</h2>
-      <div className="grid md:grid-cols-3 gap-6 mt-6">
+      <div className="grid md:grid-cols-2 gap-6 mt-6 py-6">
         {[
           {
-            name: "Vaibhav Jaulkar",
+            name: "Anil Gothi",
             role: "Director",
             image:
-              "https://img.freepik.com/free-photo/cheerful-indian-businessman-smiling-closeup-portrait-jobs-career-campaign_53876-129417.jpg?t=st=1741367145~exp=1741370745~hmac=6a85ccd9c89f8a4224689d80527556617546359ab10f319c2c39002b5b865863&w=1380",
+              "/team2.jpg",
           },
           {
-            name: "Priyanka Agrawal",
+            name: "Vijay Gothi",
             role: "Director",
             image:
-              "	https://img.freepik.com/free-photo/closeup-young-female-professional-making-eye-contact-against-colored-background_662251-651.jpg?t=st=1741367243~exp=1741370843~hmac=c5b4c9509aa6cfe8c6645e273d614c86cbd2f304d86ecc5e0af1cdcf4d850d9a&w=740",
+              "/team1.jpg",
           },
-          {
-            name: "Yogita Vyas",
-            role: "Director",
-            image:
-              "	https://img.freepik.com/free-photo/front-view-young-businessman-office-clothing_23-2148763859.jpg?t=st=1741367309~exp=1741370909~hmac=145091208bce2afd0d84b2d216fe2e20f97f6ba382fbf6ed5d67b9190fe88b34&w=1380",
-          },
+          
         ].map((leader, index) => (
-          <div key={index} className="text-center">
-            <div className="relative w-44 h-48 mx-auto overflow-hidden">
+          <div key={index} className="text-center flex justify-center items-center flex-col ">
+            <div className="relative w-44 h-48 mx-auto overflow-hidden ">
               <Image
                 src={leader.image}
                 alt={leader.name}
@@ -80,7 +75,6 @@ const PurposeAndLeadership = () => {
               />
             </div>
             <h3 className="mt-3 font-medium text-black">{leader.name}</h3>
-            <p className="text-gray-500 text-sm">{leader.role}</p>
           </div>
         ))}
       </div>

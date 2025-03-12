@@ -31,7 +31,7 @@ const Brands = () => {
                 <img
                   src={brand.image}
                   alt={`Brand ${brand.id}`}
-                  className="w-full h-full object-cover rounded-lg shadow-md"
+                  className="w-full h-full object-contain  rounded-lg shadow-md"
                 />
               </div>
             ))}
@@ -44,13 +44,27 @@ const Brands = () => {
                 <img
                   src={brand.image}
                   alt={`Brand ${brand.id}`}
-                  className="w-full h-full object-cover rounded-lg shadow-md"
+                  className="w-full h-full object-contain rounded-lg shadow-md"
                 />
               </div>
             ))}
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .animate-scroll {
+          animation: scroll 7s linear infinite;
+        }
+
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 };
