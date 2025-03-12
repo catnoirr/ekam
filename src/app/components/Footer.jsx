@@ -13,18 +13,18 @@ const Footer = () => {
       <div className="mx-auto px-6 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="col-span-2">
-          <Image src="/newlogo.png" alt="Paytm" width={100} height={20} />
+          <Image src="/logo.jpg" alt="Paytm" width={100} height={20} />
             
             <p className="text-gray-600 text-sm mt-2 c">
               At Ekam, we create impactful corporate gifting solutions that enhance brand identity, foster employee engagement, and build lasting relationships. With innovative and trend-driven ideas, we offer scalable, customizable, and globally accessible gifts designed to make a memorable impression.
             </p>
-            <a href="#" className="text-red-500 mt-4 inline-block underline">SHOW ON MAP</a>
+            <a href="https://maps.app.goo.gl/8r2vAQfpW4KFT8jp6" className="text-red-500 mt-4 inline-block underline">SHOW ON MAP</a>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold text-gray-900 border-b-2 border-teal-400 w-max pb-1">COMPANY</h3>
             <ul className="mt-3 space-y-2 text-sm text-gray-600">
-              <li><a href="#">About Us</a></li>
+              <li><a href="/about">About Us</a></li>
               <li><a href="#">Contact Us</a></li>
               <li><a href="#">Career</a></li>
             </ul>
@@ -34,7 +34,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-gray-900 border-b-2 border-teal-400 w-max pb-1">QUICK LINKS</h3>
             <ul className="mt-3 space-y-2 text-sm text-gray-600">
               <li><a href="#">Track Your Order</a></li>
-              <li><a href="#">Customisation</a></li>
+              <li><a href="/customize">Customisation</a></li>
             </ul>
           </div>
 
@@ -55,23 +55,14 @@ const Footer = () => {
                 Icon: FaInstagram,
                 color:
                   "from-[#feda75] via-[#d62976] to-[#962fbf] bg-gradient-to-br ",
-                link: "https://instagram.com",
+                link: "https://www.instagram.com/ekamgraphic?igsh=d3Exd2tubnA5NGQ5",
               },
               {
                 Icon: FaFacebookF,
                 color: "from-blue-500 to-blue-700 bg-gradient-to-r",
-                link: "https://facebook.com",
+                link: "https://www.facebook.com/share/15HLon4QRU/",
               },
-              {
-                Icon: FaLinkedinIn,
-                color: "from-blue-700 to-blue-900 bg-gradient-to-r",
-                link: "https://linkedin.com",
-              },
-              {
-                Icon: FaYoutube,
-                color: "from-red-500 to-red-700 bg-gradient-to-r",
-                link: "https://youtube.com",
-              },
+             
             ].map(({ Icon, color, link }, index) => (
               <a
                 key={index}

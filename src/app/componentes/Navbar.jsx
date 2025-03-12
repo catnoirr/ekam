@@ -79,7 +79,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-white">
-    <nav className="fixed left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl border border-gray-200 bg-white shadow-md z-50 rounded-full mt-2">
+    <nav className="fixed left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl  text-white  bg-black shadow-md z-50 rounded-full mt-2">
       {/* Loading bar - visible when isLoading is true */}
       <div 
         className={`h-0.5 bg-blue-500 transition-transform duration-300 ease-in-out ${
@@ -92,23 +92,23 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/newlogo.png"
+              src="/logo.png"
               alt="ekam Logo"
-              width={60}
-              height={25}
+              width={100}
+              height={50}
               className="object-contain"
             />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-500">
+            <Link href="/" className="text-white hover:text-blue-500">
              HOME
 
             </Link>
             <div className="relative group">
               <button
-                className="text-gray-700 group-hover:text-blue-500 flex items-center"
+                className="text-white group-hover:text-blue-500 flex items-center"
               >
                 EXPLORE CATEGORIES
                 <svg
@@ -139,21 +139,21 @@ const Navbar = () => {
                   ))}
                 </div>
             </div>
-            <Link href="/customize" className="text-gray-700 hover:text-blue-500">
+            <Link href="/customize" className="text-white hover:text-blue-500">
               CUSTOME PRODUCT
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-500">
+            <Link href="/about" className="text-white hover:text-blue-500">
               ABOUT US
             </Link>
           </div>
 
           {/* Right Icons */}
-          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4">
             <a 
               href="https://wa.me/+919773347222" 
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:flex items-center space-x-2 text-gray-700 hover:text-green-500"
+              className="hidden md:flex items-center space-x-2 text-white hover:text-green-500"
             >
               <BsWhatsapp className="h-5 w-5" />
               <span className="font-medium">Chat with us</span>
@@ -164,7 +164,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={handleMobileMenuClick}
-              className="text-gray-700 hover:text-blue-500"
+              className="text-white hover:text-blue-500"
             >
               <svg
                 className="h-6 w-6"

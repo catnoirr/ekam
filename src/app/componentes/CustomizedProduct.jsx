@@ -156,7 +156,7 @@ const CustomizedProduct = () => {
               Ready to bring your ideas to life?
             </p>
             <Link 
-              href="/store"
+              href="https://maps.app.goo.gl/8r2vAQfpW4KFT8jp6"
               className="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor" className="w-6 h-6">

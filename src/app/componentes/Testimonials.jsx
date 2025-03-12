@@ -6,30 +6,30 @@ const testimonials = [
   {
     id: 1,
     name: "Bhagyashree Gaikwad",
-    image: "/brands/Customer-Photos-9.webp",
+    image: "/r1.jpg",
     rating: 5,
-    text: "Their service is upto mark. I approached them for an urgent print and they came up as life saviors. I loved their cooperation as well as aura of communicating with their customers. Keep going guys, may you achieve great heights."
+    text: "Excellent printing quality and customer service. They handled my urgent request professionally. Highly recommend their services!"
   },
   {
     id: 2,
     name: "Melbin Alexander",
     image: "/brands/Customer-Photos-8.webp",
     rating: 5,
-    text: "It was our first experience working with them. We placed an order for logo printing on custom T-shirts for our company, and the whole experience was exceptionally seamless."
+    text: "First time ordering custom T-shirts with logos. Seamless experience, excellent service, and professional handling of our request!"
   },
   {
     id: 3,
     name: "Sangram Jaiswal",
-    image: "/brands/Customer-Photos-5.webp",
+    image: "/mug.jpg",
     rating: 5,
-    text: "WeMee offers exceptional custom mug printing services at affordable rates! We recently customise mugs with logo, and they did it perfectly, just the way we wanted. We're happy with their quality and service. If you're looking for reliable and professional mug printing, WeMee is highly recommended for all your custom printing needs!"
+    text: "Great custom mug printing at affordable rates. Perfect quality and service. Highly recommended for all your printing needs!"
   },
   {
     id: 4,
     name: "Neha Kavade",
-    image: "/brands/Customer-Photos-3.webp",
+    image: "/cpas.jpg",
     rating: 5,
-    text: "We customise caps from WeMee at affordable rates. We order them to embroider logo on caps and they did it perfectly as we want. we our happy with their service and will place our next from them. We highly recommend WeMee for all printing service."
+    text: "Affordable custom caps with perfect logo embroidery. Highly recommend Ekam for all printing services."
   },
   // Adding more testimonials for pagination demo
   {
@@ -42,23 +42,23 @@ const testimonials = [
   {
     id: 6,
     name: "Sarah Johnson",
-    image: "/brands/Customer-Photos-7.webp",
+    image: "/bottle.jpg",
     rating: 5,
-    text: "Exceptional work on our custom merchandise. The attention to detail was impressive."
+    text: "Outstanding custom merchandise with impressive attention to detail. Highly recommend for quality and service."
   },
   {
     id: 7,
     name: "Mike Brown",
-    image: "/brands/Customer-Photos-1.webp",
+    image: "/tshirt.jpg",
     rating: 5,
-    text: "Great experience working with the team. They were responsive and delivered on time."
+    text: "Fantastic team! Very responsive and timely delivery. Highly recommend for their professionalism and quality service."
   },
   {
     id: 8,
     name: "Emily Davis",
-    image: "/brands/Customer-Photos-6.webp",
+    image: "/hoodie.jpg",
     rating: 5,
-    text: "The quality of the prints exceeded our expectations. Highly recommended!"
+    text: "Exceptional print quality and service. Exceeded expectations. Highly recommend for all your printing needs!"
   }
 ];
 
@@ -118,7 +118,7 @@ const Testimonials = () => {
                 key={testimonial.id}
                 className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 mx-auto w-full max-w-sm"
               >
-                <div className="aspect-w-16 aspect-h-9 mb-3 sm:mb-4">
+                <div className="w-[240px] h-[200px] mb-3 sm:mb-4 mx-auto">
                   <Image
                     src={testimonial.image}
                     alt={`${testimonial.name}'s testimonial`}

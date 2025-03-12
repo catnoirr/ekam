@@ -9,31 +9,31 @@ const Services = () => {
   const services = [
     {
       name: 'Embroidery',
-      image: '/services/embroidery.webp',
+      image: '/embroidry.jpg',
       description: 'Premium embroidery services for logos, designs, and custom patterns with exceptional detail and durability.',
       color: 'bg-blue-500'
     },
     {
       name: 'Vinyl Printing',
-      image: '/services/vinyl.webp',
+      image: '/venyl.jpg',
       description: 'High-quality vinyl printing perfect for custom t-shirts, signs, and promotional materials.',
       color: 'bg-pink-500'
     },
     {
       name: 'Screen Printing',
-      image: '/services/screen.webp',
+      image: '/screen.jpg',
       description: 'Professional screen printing services ideal for bulk orders, team uniforms, and merchandise.',
       color: 'bg-yellow-400'
     },
     {
       name: 'Sublimation',
-      image: '/services/sublimation.webp',
+      image: '/sublimation.jpg',
       description: 'Full-color sublimation printing for vibrant, long-lasting designs on various materials.',
       color: 'bg-blue-500'
     },
     {
       name: 'DTF Printing',
-      image: '/services/dtf.webp',
+      image: '/dtf.jpg',
       description: 'Direct-to-film printing technology for versatile and durable transfers on multiple fabric types.',
       color: 'bg-pink-500'
     },
@@ -99,6 +99,7 @@ const Services = () => {
                 </div>
                 <div className="p-8 relative">
                   <div className="absolute top-0 left-0 w-full h-16"></div>
+                  <h3 className="text-xl font-bold mb-2 border-2 border-gray-400 p-2 px-4 rounded-full  text-center">{service.name}</h3>
                   <p className="text-black leading-relaxed text-lg">
                     {service.description}
                   </p>

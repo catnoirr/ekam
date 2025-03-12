@@ -3,16 +3,11 @@ import { useEffect, useRef } from 'react';
 
 const Brands = () => {
   const brands = [
-    { id: 1, image: '/brands/Customer-Photos-1.webp' },
-    { id: 2, image: '/brands/Customer-Photos-2.webp' },
-    { id: 3, image: '/brands/Customer-Photos-3.webp' },
-    { id: 4, image: '/brands/Customer-Photos-4.webp' },
-    { id: 5, image: '/brands/Customer-Photos-5.webp' },
-    { id: 6, image: '/brands/Customer-Photos-6.webp' },
-    { id: 7, image: '/brands/Customer-Photos-7.webp' },
-    { id: 8, image: '/brands/Customer-Photos-8.webp' },
-    { id: 9, image: '/brands/Customer-Photos-9.webp' },
-    { id: 10, image: '/brands/Customer-Photos-10.webp' },
+    { id: 1, image: '/brand1.jpg' },
+    { id: 2, image: '/brand2.jpg' },
+    { id: 3, image: '/brand3.jpg' },
+    { id: 4, image: '/brand4.jpg' },
+  
   ];
 
   return (
