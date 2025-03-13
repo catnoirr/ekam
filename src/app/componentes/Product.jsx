@@ -9,7 +9,7 @@ const products = [
         id: 1,
         title: "ROUNDNECK T-SHIRTS",
         description: "Classic comfort meets style",
-        image: "https://img.freepik.com/free-photo/simple-black-t-shirt-worn-by-man_53876-102772.jpg?uid=R154017377&ga=GA1.1.1669204415.1735993747&semt=ais_hybrid",
+        image: "/products/tshirt.jpg",
         link: "/products/roundneck"
     },
     {
@@ -23,7 +23,7 @@ const products = [
         id: 3,
         title: "HOODIES / JACKETS",
         description: "Stay warm in style",
-        image: "https://img.freepik.com/free-photo/young-person-wearing-hoodie-mockup_23-2149246216.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
+        image: "/products/hoodie.jpg",
         link: "/products/hoodies"
     },
     {
@@ -51,49 +51,49 @@ const products = [
         id: 7,
         title: "BRANDED APPARELS",
         description: "Custom branded clothing",
-        image: "https://img.freepik.com/premium-photo/young-handsome-man-black-hoodie-zipper-posing-plain-wall_262099-162.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
+        image: "/products/apprarel.jpg",
         link: "/products/branded"
     },
     {
         id: 8,
         title: "DRINKWARE",
         description: "Premium drink accessories",
-        image: "https://img.freepik.com/premium-psd/hand-hold-bottle-water-mockup_206643-32.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
+        image: "/products/cup.jpg",
         link: "/products/drinkware"
     },
     {
         id: 9,
         title: "CORPORATE GIFT SET",
-        description: "Premium drink accessories",
+        description: "Premium Corporate accessories",
         image: "https://img.freepik.com/premium-photo/gifts-black-golden-decorations-white-background-christmas-winter-new-year-concept_241749-183.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
         link: "/products/giftset"
     },
     {
         id: 10,
         title: "DIARIES & PENS",
-        description: "Premium drink accessories",
-        image: "https://img.freepik.com/free-photo/top-view-red-notebook-with-white-background_23-2148236793.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
+        description: "Premium Stationary accessories",
+        image: "/products/diaries.jpg",
         link: "/products/diaries"
     },
    
     {
         id: 11,
         title: "DESK ORGANIZERS",
-        description: "Premium drink accessories",
+        description: "Premium desk accessories",
         image: "https://img.freepik.com/free-photo/books-vase-vintage-camera-eyeglasses-pencil-holders-white-blank-paper-wooden-backdrop_23-2147979111.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
         link: "/products/desk-accessories"
     },
     {
         id: 12,
         title: "SMART GADGETS",
-        description: "Premium drink accessories",
+        description: "Premium  accessories",
         image: "https://img.freepik.com/free-photo/modern-stationary-collection-arrangement_23-2149309628.jpg?t=st=1741369628~exp=1741373228~hmac=dec178682216c4d479b63afe89a5b32a2d146ade2ad7dcb78806fcc78a713255&w=740",
         link: "/products/smart-gadgets"
     },
     {
         id: 13,
         title: "TECH GADGETS",
-        description: "Premium drink accessories",
+        description: "Premium tech gadgets",
         image: "https://img.freepik.com/premium-photo/high-angle-view-digital-camera-table_1048944-23315823.jpg?uid=R154017377&ga=GA1.1.995517755.1740478319&semt=ais_hybrid",
         link: "/products/tech-gadgets"
     },
@@ -176,7 +176,7 @@ const Product = () => {
                             {/* Card Title */}
                             <div className="p-5">
                                 <h3 className="font-semibold text-base text-gray-800 group-hover:text-cyan-600 transition-colors duration-300">
-                                    {product.title} PRINT
+                                PRINT  {product.title} 
                                 </h3>
                             </div>
 

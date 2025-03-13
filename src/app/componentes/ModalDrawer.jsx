@@ -247,7 +247,7 @@ const ModalDrawer = ({ isOpen, onClose, selectedProduct }) => {
                   <div>
                     <label className="block text-gray-700 text-sm font-medium mb-3">Quantity Required *</label>
                     <div className="grid text-black grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-                      {['25-50', '50-100', '100-200', '200-500', 'Above 500'].map((quantity) => (
+                      {['1-10', '10-25', '25-50', '50-100', 'Above 100'].map((quantity) => (
                         <label key={quantity} className="relative">
                           <input
                             type="radio"
