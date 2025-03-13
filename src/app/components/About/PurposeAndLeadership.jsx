@@ -52,16 +52,16 @@ const PurposeAndLeadership = () => {
       <div className="grid md:grid-cols-2 gap-6 mt-6 py-6">
         {[
           {
+            name: "Vipul Gothi",
+            role: "Founder & Director",
+            image:
+              "/team1.jpg",
+          },
+          {
             name: "Anil Gothi",
             role: "Director",
             image:
               "/team2.jpg",
-          },
-          {
-            name: "Vijay Gothi",
-            role: "Director",
-            image:
-              "/team1.jpg",
           },
           
         ].map((leader, index) => (
@@ -75,6 +75,7 @@ const PurposeAndLeadership = () => {
               />
             </div>
             <h3 className="mt-3 font-medium text-black">{leader.name}</h3>
+            <p className="text-gray-600">{leader.role}</p>
           </div>
         ))}
       </div>
