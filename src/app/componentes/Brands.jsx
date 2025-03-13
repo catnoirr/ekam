@@ -7,7 +7,15 @@ const Brands = () => {
     { id: 2, image: '/brand2.jpg' },
     { id: 3, image: '/brand3.jpg' },
     { id: 4, image: '/brand4.jpg' },
-  
+    { id: 5, image: '/brand5.jpeg' },
+    { id: 6, image: '/brand6.jpg' },
+    { id: 7, image: '/brand7.jpg' },
+    { id: 8, image: '/brand8.png' },
+    { id: 9, image: '/brand9.jpg' },
+    { id: 10, image: '/brand10.jpg' },
+    { id: 11, image: '/brand11.jpg' },
+    { id: 12, image: '/brand12.jpg' },
+
   ];
 
   return (
